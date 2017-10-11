@@ -1,0 +1,17 @@
+<project name="antproject" default="copy">
+<import file="module1.xml"/>
+<property name="build-dir" value="build/test/classes"/>
+<property name="version" value="1.2"/>
+<!--target name="echo">
+<echo>this is a sample java based build tool</echo>
+</target-->
+<target name="clean" depends="echo">
+<mkdir dir="${build-dir}"/>
+</target>
+<target name="create" depends="clean">
+<delete dir="${build-dir}"/>
+</target>
+<target name="copy" depends="create">
+<copy file="venkat.txt" tofile="subbu.txt"/>
+</target>
+</project>
